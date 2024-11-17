@@ -2,8 +2,8 @@ from app import create_app, db
 from flask_migrate import Migrate
 from sqlalchemy import text
 
-app = create_app()  # Use the create_app function to create the Flask app
-migrate = Migrate(app, db)  # Initialize Flask-Migrate
+app = create_app()
+migrate = Migrate(app, db)
 
 @app.route('/')
 def test_db():
