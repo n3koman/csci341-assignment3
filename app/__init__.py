@@ -12,4 +12,9 @@ def create_app():
     db.init_app(app)
     Migrate(app, db)
 
+    # Register routes
+    with app.app_context():
+        from .routes import main
+        app.register_blueprint(main)
+
     return app
